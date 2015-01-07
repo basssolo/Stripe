@@ -32,7 +32,6 @@ Subscriptions.prototype.remove = function(customerId, subscriptionId, successCal
     this.processRequest(["DELETE", "customers/" + customerId + "/subscriptions/" + subscriptionId, null], successCallback, errorCallback);
 }
 
-*/
 if (typeof module !== "undefined" && module.exports) {
   module.exports = new Subscriptions();
 }
