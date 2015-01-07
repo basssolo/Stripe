@@ -24,7 +24,7 @@ Subscriptions.prototype.list = function(id, arg, successCallback, errorCallback)
       this.processRequest(["GET","customers/" + id + "/subscriptions", arg], successCallback, errorCallback);
     }
     else{
-      this.processRequest(["GET","customers/" + id + "/subscriptions", null], successCallback, errorCallback);
+      this.processRequest(["GET","customers/" + id + "/subscriptions", null], arg, successCallback);
     }
 }
 
