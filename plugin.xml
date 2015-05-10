@@ -21,6 +21,10 @@
         <clobbers target="stripe.recipients" />
     </js-module>
 
+    <js-module name="subscriptions" src="www/subscriptions.js">
+        <clobbers target="stripe.subscriptions" />
+    </js-module>
+
     <js-module name="transfers" src="www/transfers.js">
         <clobbers target="stripe.transfers" />
     </js-module>
