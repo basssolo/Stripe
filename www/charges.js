@@ -19,6 +19,10 @@ Charges.prototype.update = function(id, arg, successCallback, errorCallback){
     this.processRequest(["POST","charges/" + id, arg], successCallback, errorCallback);
 }
 
+Charges.prototype.capture = function(id, arg, successCallback, errorCallback){
+    this.processRequest(["POST","charges/" + id, arg], successCallback, errorCallback);
+}
+
 Charges.prototype.list = function(successCallback, errorCallback){
   this.processRequest(["GET","charges", null], successCallback, errorCallback);
 }
