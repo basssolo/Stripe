@@ -34,6 +34,7 @@ You need a Stripe API key for using this plugin, which you can obtain from [Stri
 - stripe.charges.retrieve
 - stripe.charges.list
 - stripe.charges.update
+- stripe.charges.capture
 
 
 - stripe.transfers.create
@@ -216,6 +217,23 @@ This request accepts only the description and metadata as arguments.
 
     stripe.charges.update("ch_14iFBp2aMqOhtEaUftfHNnmN", {
         description: "Charge for test@example.com"
+    },function(result){
+        // asynchronously called
+    });
+
+
+# stripe.charges.capture
+
+Capture the payment of an existing, uncaptured, charge. This is the second half of the two-step payment flow, where first you created a charge with the capture option set to false.
+
+Uncaptured payments expire exactly seven days after they are created. If they are not captured by that point in time, they will be marked as refunded and will no longer be capturable.
+
+Allowed optional parameters can be found in Stripe API documentation.
+
+## Example
+
+    stripe.charges.capture("ch_14iFBp2aMqOhtEaUftfHNnmN", {
+        amount: 2000
     },function(result){
         // asynchronously called
     });
