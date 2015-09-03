@@ -20,6 +20,10 @@
     <js-module name="recipients" src="www/recipients.js">
         <clobbers target="stripe.recipients" />
     </js-module>
+    
+    <js-module name="refunds" src="www/refunds.js">
+    	<clobbers target="stripe.refunds" />
+    </js-module>
 
     <js-module name="subscriptions" src="www/subscriptions.js">
         <clobbers target="stripe.subscriptions" />
