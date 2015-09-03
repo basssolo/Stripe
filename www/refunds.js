@@ -10,3 +10,7 @@ function Charges(){
 Charges.prototype.create = function(arg, successCallback, errorCallback){
     this.processRequest(["POST","refunds", arg], successCallback, errorCallback);
 }
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = new Refunds();
+}
